@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="Day3.css">
+
+        <script>
+            var students = [];
+
+            function registerfn(){
+            var x = document.getElementById("name").value;
+            var y = document.getElementById("pwd1").value;
+            var z = document.getElementById("Phno").value;
+            var w = document.getElementById("dob").value;
+
+            var student = {};
+
+            student.Name = x;
+            student.Password = y;
+            student.phoneno = z;
+            student.dateofbirth= w;
+
+            students.push(student);
+            console.log(students);
+            }
+            function checkFunc(){
+                var x = document.getElementById("name").value;
+                var y = document.getElementById("pwd1").value;
+                
+                var isUserFound = false;
+                var isPasswordFound = false;
+                 
+                for( var i=0; i < students.length; i++) {
+                    if( x == students[i].Name){
+                        isUserFound = true;
+
+                        if( y == students[i].Password){
+                            isPasswordFound = true;
+                            break;
+                        }
+                    }
+                }
+                if(isUserFound==true && isPasswordFound==true) alert("Login Successful")
+                else if(isUserFound==false && isPasswordFound==true) alert("Username is invalid")
+                else alert("password invalid");
+            }
+           
+        </script>
+    </head>
+    <body class="body">
+        <div>
+            <img src="C:\Users\Prasanna\Downloads\sm.png"><br><br><br>
+        </div>
+        <div class="row">
+            <div  class="col-sm-6">
+             <div class="container">
+                 <h3 style="padding-left: 50px; color: rgb(16, 37, 75); font-weight: bolder;">Register</h3><br>
+                <label style="padding-right: 78px;">Name</label>
+                <input type="text" id="name"><br><br>
+                <label>Create Password </label>
+                <input type="password" id="pwd1"><br><br>
+                <label style="padding-right: 14px;">Phone Number</label>
+                <input type="number" id="Phno"><br><br>
+                <label style="padding-right: 82px;">DOB</label>
+                <input type="date" id="dob"><br><br>
+                <button type="button"  class="button" onclick="registerfn()">REGISTER</button>
+             </div>
+             </div>
+             <div class="col-sm-6">
+                 <h3 style="color: rgb(16, 37, 75); margin-left: 100px; font-weight: bold;"> Login </h3><br>
+                <label>Username</label>
+                <input type="text" id="name"><br><br>
+                <label>password </label>
+                <input type="password" id="pwd1"><br><br>
+                <button type="button"  class="button" onclick="checkFunc()">Login</button>
+            </div>
+            
+        </div>
+    </body>
+</html>
