@@ -1,0 +1,11 @@
+input{
+    border-radius: 10px;
+    width: 500px;
+    height: 28px;
+}
+.details2{
+    border: 5px black;
+    border-radius: 15px;
+    background-color: gainsboro;
+   padding: 30px;
+}
