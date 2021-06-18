@@ -1,0 +1,93 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <button type="submit" class="btn btn-outline-primary" (click)="reg()">Register</button>
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <table class="table">
+            <thead class="table col-md-12">
+                <tr class="thead-dark" scope="row">
+                    <th *ngFor="let a of schemas">{{a.name}}</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let data of datas">
+                <tr>
+                    <td style="padding-right: 30px;" scope="row">{{data.REFERENCE_ID}}</td>
+                    <td>{{data.ACCOUNT_NUMBER}}</td>
+                    <td>{{data.CURRENT_ACCOUNT_TYPE}}</td>
+                    <td>{{data.ACCOUNT_NAME}}</td>
+                    <td>{{data.CURRENCY_CODE}}</td>
+                    <td>{{data.AVL_BAL}}</td>
+                    <td>{{data.LEDGER_BALANCE}}</td>
+                    <td>{{data.EQ_AVL_BAL}}</td>
+                    <td>{{data.ACCOUNT_TYPE_CODE}}</td>
+                    <td>{{data.ACCOUNT_STATUS}}</td>
+                    <td>{{data.OPENING_DATE}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div><br><br><br><br><br>
+<h3 style="text-align: center;">Card View</h3>
+<div class="row">
+    <div class="col-md-4" *ngFor="let data of datas">
+        <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="card-header" *ngIf="schemaHeader" id="header">
+                {{schemaHeader.name}} : {{data.ACCOUNT_NUMBER}}
+            </div>
+            <div class="card-body">
+                <div>
+                    {{field[0].name}}&nbsp; :&nbsp; {{data.CURRENT_ACCOUNT_TYPE}} <br>
+                    <hr>
+                    {{field[1].name}} &nbsp;: &nbsp;{{data.ACCOUNT_NAME}} <br>
+                    <hr>
+                    {{field[2].name}} &nbsp;:&nbsp; {{data.AVL_BAL}} <br>
+                    <hr>
+                    {{field[3].name}} &nbsp;: &nbsp; {{data.CURRENCY_CODE}}<br>
+                    <hr>
+                    {{field[4].name}} &nbsp;: &nbsp;{{data.LEDGER_BALANCE}}<br>
+                </div>
+                <hr>
+                <div>
+                    {{cardContentExpanded[1].name}} &nbsp;:&nbsp;{{data.OPENING_DATE}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h3 style="text-align: center;">List View</h3>
+<div class="row">
+    <div class="col-md-4" *ngFor="let b of datas">
+        <ul class=" list-group" style="margin: 40px;">
+            <li class="list-group-item" style="color: rgb(231, 69, 69);">{{schemas[1].name}} : {{b.ACCOUNT_NUMBER}}</li>
+            <li class="list-group-item">{{schemas[3].name}} : {{b.ACCOUNT_NAME}}</li>
+            <li class="list-group-item">{{schemas[5].name}}: {{b.AVL_BAL}}</li>
+            <li class="list-group-item">{{schemas[7].name}}: {{b.EQ_AVL_BAL}}</li>
+            <li class="list-group-item">{{schemas[10].name}}: {{b.OPENING_DATE}}</li>
+        </ul>
+    </div>
+</div>
+
+<div>
+
+</div> -->
+
+
+<div class="homepage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 card" *ngFor="let data of jsonApp" style="margin: 20px; margin-left: 70px;">
+                <span
+                    style="text-align: center; margin: 0px; background-color: rgb(207, 219, 135);">{{data.name}}</span>
+                <!-- <span class="iconClass" area-hidden="true"></span> -->
+                <span style="text-align: center;">{{data.style.textClass}}</span>
+
+            </div>
+        </div>
+    </div>
+    <br><br>
+</div>
